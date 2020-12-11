@@ -1,0 +1,13 @@
+.rounded {
+    height: 50%;
+    width: 50%;
+    max-width: 500px ;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.resultado{
+    width: 60%;
+    height: 95%;
+    float: left;
+}

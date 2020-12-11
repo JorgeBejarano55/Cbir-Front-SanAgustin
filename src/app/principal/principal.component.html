@@ -1,0 +1,33 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand"> CBIR - San Agustin - Huila </a>
+    <span class="navbar-text">
+      Sistemas de Recuperación de Imágenes Basada en Contenido
+    </span>
+</nav>
+
+<br >
+<div align="center"  class="container">
+  <img [src]=" imagenIngresada || '../assets/123.jpg'" alt="Fondo San agustin" class="rounded" alt="Imagen ingresada">
+  <input type="file" class="imagenElegida" class="d-none" (change)="imagenSeleccionada($event)" #imageInput>
+  <br class="m-2">
+  <br _ngcontent-eyn-c11="">
+  <button class="mx-auto" type="button" class="btn btn-outline-primary" (click)="imageInput.click()" >Seleccionar imagen</button>
+  <button class="mx-auto" type="button" class="btn btn-outline-primary" (click)="cbir()">Subir</button>
+  
+
+</div>
+
+<!--Resultados -->
+<hr>
+<div >
+
+</div>
+<hr>
+
+<div _ngcontent-eyn-c11="" align="center" class="container">
+  
+  <footer _ngcontent-eyn-c11="">
+    <br _ngcontent-eyn-c11="">By Jairo Delgado - Jorge Bejarano 
+  </footer>
+
+</div>
