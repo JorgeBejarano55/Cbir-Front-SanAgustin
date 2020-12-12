@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { observable, Observable } from 'rxjs';
-import { imagen } from '../models/imagen';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

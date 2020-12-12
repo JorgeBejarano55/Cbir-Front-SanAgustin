@@ -6,8 +6,8 @@
     object-fit: contain;
 }
 
-.resultado{
-    width: 60%;
-    height: 95%;
-    float: left;
+.img-fluid{
+    max-width: 400px ;
+    max-height: 400px;
+    float: center;
 }

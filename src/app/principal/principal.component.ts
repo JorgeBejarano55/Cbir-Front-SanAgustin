@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { grupo } from '../models/imagen'
 import { CbirService } from '../services/cbir.service';
 
 interface HtmlInputEvent extends Event{
@@ -15,10 +14,10 @@ export class PrincipalComponent implements OnInit {
   
   file: File;
   imagenIngresada: String | ArrayBuffer;
-  animal: grupo[] = [];
   existeImagenes: boolean = false;
-  
+
   img: String [] = [];
+  test: String [];
 
   constructor(private cbirService: CbirService) { }
 
@@ -37,23 +36,11 @@ export class PrincipalComponent implements OnInit {
   async cbir(){
 
     if(this.imagenIngresada != null){
-      this.animal = [];
       console.log(this.existeImagenes)
-      const a = await this.cbirService.postImage(this.imagenIngresada);
+      //const a = await this.cbirService.postImage(this.imagenIngresada);
       this.existeImagenes = true;
-      console.log('Datos que recibo en la constante "a"')
-      console.log(a);
-
-      //this.img1 = a.topImagenes[0].nombreGrupo + "/" +  a.topImagenes[0].nombreImagen;
       
-      for(var i = 0; i < 5; i++){
-        var nombreGrupo = a.topGrupos[i].nombreGrupo.split(".");
-        this.animal.push({
-          posicion: (i+1),
-          nombre: nombreGrupo[1],
-          ocurrencias: a.topGrupos[i].numeroOcurrencias
-        });
-      }
+      this.test = ['1.jpg','6.jpg','3.jpg','4.jpg','5.jpg'];
     }else{
       console.log('No se ha cargado ninguna imagen')
     }

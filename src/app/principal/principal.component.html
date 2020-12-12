@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand"> CBIR - San Agustin - Huila </a>
+  <a href="/" class="navbar-brand"> CBIR - San Agustin - Huila </a>
     <span class="navbar-text">
       Sistemas de Recuperación de Imágenes Basada en Contenido
     </span>
@@ -11,16 +11,21 @@
   <input type="file" class="imagenElegida" class="d-none" (change)="imagenSeleccionada($event)" #imageInput>
   <br class="m-2">
   <br _ngcontent-eyn-c11="">
-  <button class="mx-auto" type="button" class="btn btn-outline-primary" (click)="imageInput.click()" >Seleccionar imagen</button>
-  <button class="mx-auto" type="button" class="btn btn-outline-primary" (click)="cbir()">Subir</button>
-  
-
+  <button class="mx-auto" type="button" class=" btn btn-primary" (click)="imageInput.click()" >Seleccionar imagen</button>
+  <button  type="button" class="btn btn-secondary" (click)="cbir()">Consultar</button>
 </div>
 
-<!--Resultados -->
 <hr>
-<div >
-
+<!--Resultados -->
+<h4 *ngIf = "existeImagenes" align="center">
+  Resultados
+</h4>
+<div class="row">
+  <div class="col-sm-3" *ngFor="let mono of test">
+    <div class="card text-center m-1">
+        <img src="../assets/images/{{mono}}"class="img-fluid" >
+    </div>
+  </div>
 </div>
 <hr>
 
