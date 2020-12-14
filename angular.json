@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Cbir-SanAgustin"
+    }
+  },
+  "defaultProject": "Cbir-SanAgustin",
+  "cli": {
+    "analytics": false
+  }
 }

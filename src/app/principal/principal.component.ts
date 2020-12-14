@@ -37,10 +37,14 @@ export class PrincipalComponent implements OnInit {
 
     if(this.imagenIngresada != null){
       console.log(this.existeImagenes)
-      //const a = await this.cbirService.postImage(this.imagenIngresada);
-      this.existeImagenes = true;
-      
-      this.test = ['1.jpg','6.jpg','3.jpg','4.jpg','5.jpg'];
+      const a = await this.cbirService.postImage(this.imagenIngresada);
+      // this.existeImagenes = true;
+      // var aux
+      // a.topImagenes.forEach(element => {
+      //   console.log(element.nombreImagen)
+      //   aux.push(element.nombreImagen)
+      // });
+      //   this.test = aux
     }else{
       console.log('No se ha cargado ninguna imagen')
     }
